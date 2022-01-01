@@ -8,7 +8,7 @@ class Cliente{
 
 class ContaCorrente{
     agencia;
-    // #saldo =0
+    // #saldo =0 seria uma forma de usar um atributo privado
     _saldo = 0;
 
     sacar(valor){
