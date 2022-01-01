@@ -1,4 +1,4 @@
-class ContaCorrente{
+export class ContaCorrente{
     agencia;
     // #saldo =0 seria uma forma de usar um atributo privado
     _saldo = 0;
