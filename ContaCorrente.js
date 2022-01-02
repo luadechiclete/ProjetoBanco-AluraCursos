@@ -1,11 +1,33 @@
+import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente{
     agencia;
-    cliente;
-
-
+    _cliente;
     // #saldo =0 seria uma forma de usar um atributo privado
     _saldo = 0;
+
+
+
+    set cliente(novoValor){
+        if(novoValor instanceof Cliente){
+            this._cliente = novoValor;
+        }
+    }
+
+    get cliente(){
+        return this._cliente;
+    }
+
+    get saldo(){
+        return this._saldo;
+    }
+
+    constructor(cliente, agencia){
+        this.agencia = agencia;
+        this.cliente = cliente;
+    }
+
+
 
 
     sacar(valor){
